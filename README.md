@@ -1,3 +1,3 @@
 # Blog01
 
-lkjhg
+Government controls EVERYTHING!!! Only some of us know...
