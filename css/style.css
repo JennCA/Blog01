@@ -10,6 +10,7 @@ a:link, a:hover, a:visited, a:active{
   color: 	#3399ff;
   text-decoration: none;
   font-size: 50px;
+
 }
 
 h1{
@@ -21,17 +22,9 @@ div[id=logo]{
   font-size: 28px;
 }
 
-
-
 div[id=respond]{
   text-align: center;
   color: #ff33ff;
-  text-decoration: underline;
-  text-decoration-color: #3399ff;
-}
-
-.GET{
-  text-decoration: none;
 }
 
 .guestbook-entry {

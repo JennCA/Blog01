@@ -20,26 +20,28 @@
   <div id="main">
             <h3>Here you can check out other Blogs:</h3>
             <?php
-              $dbconnection = new PDO('mysql:host=10.20.16.102;dbname=ipadressen','DB_BLJ','BLJ12345l');
+              $dbconnection = new PDO('mysql:host=10.20.16.107;dbname=ipadressen','DB_BLJ','BLJ12345l');
             ?>
             <h4>Fynn:</h4>
             <?php
             $stmt = $dbconnection->query("SELECT ip,home FROM t_ipadress order by ID");
             $ipArray = $stmt -> fetchAll();
+
+
             ?>
 
 
-            <p><a href="http://<?php echo $ipArray[2][0] ?><?php echo $homeArray[2][1] ?>">Fynnus Blogus</a></p>
+            <p><a href="http://<?php echo $ipArray[2][0] ?><?php echo $ipArray[2][1] ?>">Fynnus Blogus</a></p>
             <h4>Carolina:</h4>
-            <p><a href="http://<?php echo $ipArray[1][0]?><?php echo $homeArray[1][1] ?>">Carolina's Blog</a></p>
+            <p><a href="http://<?php echo $ipArray[1][0]?><?php echo $ipArray[1][1] ?>">Carolina's Blog</a></p>
             <h4>Raffaele:</h4>
-            <p><a href="http://<?php echo $ipArray[7][0]?><?php echo $homeArray[7][1] ?>">RBWS</a></p>
+            <p><a href="http://<?php echo $ipArray[7][0]?><?php echo $ipArray[7][1] ?>">RBWS</a></p>
             <h4>David:</h4>
-            <p><a href="http://<?php echo $ipArray[0][0]?><?php echo $homeArray[0][1] ?>">Ein Blog der dein Leben verändert</a></p>
+            <p><a href="http://<?php echo $ipArray[0][0]?><?php echo $ipArray[0][1] ?>">Ein Blog der dein Leben verändert</a></p>
             <h4>Céline</h4>
-            <p><a href="http://<?php echo $ipArray[3][0]?><?php echo $homeArray[3][1] ?>">CBlog</a></p>
-            <h4>Jennifer:</h4>
-            <p><a href="http://<?php echo $ipArray[4][0]?><?php echo $homeArray[4][1] ?>">Conspiracy FLOK</a></p>
+            <p><a href="http://<?php echo $ipArray[5][0]?><?php echo $ipArray[5][1] ?>">CBlog</a></p>
+            <h4>Back to the Conspiracy FLOK:</h4>
+            <p><a href="" onclick="close(),"><img src="http://i13a.3djuegos.com/files_comunidad/4320/img/avatars/7651208-32645.jpg" width="138" height="138"></a></p>
         </div>
 
 

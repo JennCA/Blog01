@@ -21,7 +21,7 @@
   <div id="logo">
   <h1 class="site-title">Conspiracy FLOK</a></h1>
             <p class="site-description">WHAT IS TRUE???<p>Be sure to visit our
-              <a href="#" onClick="javascript:window.open('friends.php', 'popUpIps', 'top=100, left=100, resizable=yes, scrollbars=no, toolbar=yes, location=yes')">FRIENDS</a>.</p></p>
+              <a href="#" onClick="javascript:window.open('friends.php', 'popUpIps', 'top=100, left=100, resizable=yes, scrollbars=yes, toolbar=yes, location=yes')">FRIENDS</a>.</p></p>
 </div>
 
 
@@ -89,8 +89,8 @@ if($_SERVER['REQUEST_METHOD'] === 'GET') {
 
                 $dbVerbindung = new PDO('mysql:host=localhost;dbname=blog', 'root', '');
 
-                $sqlBefehl = $dbVerbindung->prepare("INSERT INTO blog (username, email, passwort, text, date, bewertung) VALUES (:uname, :email, :pw, :txt, now()), :rate");
-                $sqlBefehl->execute(array(":uname" => $username, ":email" => $email, ":pw" => $password, ":txt" => $text));
+                $sqlBefehl = $dbVerbindung->prepare("INSERT INTO blog (username, email, passwort, text, date, bewertung) VALUES (:uname, :email, :pw, :txt, now(), :rate");
+                $sqlBefehl->execute(array(":uname" => $username, ":email" => $email, ":pw" => $password, ":txt" => $text, ":rate" => 0));
               }
           }
 
@@ -105,7 +105,7 @@ if($_SERVER['REQUEST_METHOD'] === 'GET') {
                 echo '<br>ID: ' . $x[0] . '<br />';
                 echo 'Username: ' . $x[1] . '<br />';
                 echo 'E-Mail: ' . $x[2] . '<br />';
-                echo 'Passwort: ' . $x[3] . '<br />';
+                echo 'Passwort: *******<br />';
                 echo 'Text: ' . $x[4] . '<br />';
                 echo 'Created: ' . $x[5] . '<br />';
                 echo 'Rating: ' . $x[6] . '<br><a href="Blog01.php?fn=ratePlus&id=' . $x[0] . '">+</a>
